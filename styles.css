@@ -1,0 +1,279 @@
+/* Typography
+font-family
+font-size
+font-weight
+line-height
+color
+layout
+flex
+margin
+padding
+background
+background-color
+border-color
+border-width
+border-style*/
+
+/* overwrite default blue/purple anchor colors and inherits parent color*/
+a {
+    color: inherit;
+}
+
+main {
+    padding-top: 4em;
+    border: 4px solid rgb(75, 139, 81);
+}
+
+body {
+    /*background-color: rgb(219, 224, 219);*/
+    padding:  0 5em;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    background-image: url(assets/firetower.jpg);
+    background-attachment: fixed;
+}
+
+iframe {
+    border: 5px solid rgb(75, 139, 81);
+}
+
+/* default styling for headers */
+h1, h2, h3, h4 {
+    font-family:'Roboto Slab','Arial';
+    /* h2 and h3 share same color */
+    color: rgb(75, 139, 81);
+    /* font size will be overwritten for h2 and h3 below*/
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* overrides font size of h2 above */
+h2 {
+    font-size: 2em;
+}
+
+/* overrides font size of h3 above */
+h3 {
+    font-size: 1.5em;
+}
+
+/* overrides font size of h4 above */
+h4 {
+    font-size: 1em;
+    margin-bottom: 2px;
+}
+
+/* overrides previous color of h1, and targets all navbar elements */
+.navbar-alignment > * {
+    color: rgb(216, 222, 198);
+}
+
+p {
+    font-family: 'Courier';
+    font-size: 17px;
+}
+
+/* styling for children of navigation bar */
+.navbar-list > * {
+    list-style: none;
+    padding-right: 3em;
+    font-family:'Roboto Slab','Arial';;
+    font-size: 25px;
+}
+
+/* removes bullet points from list elements within the timeline class */
+.timeline li {
+    list-style: none;
+}
+
+/* margins between the p tags in the timeline */
+.timeline p {
+    margin: 2px;
+}
+
+/* styling for timeline dates on homepage */
+.date {
+    font-size: 18px;
+    text-decoration: underline;
+    color: rgb(75, 139, 81);
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.submit-button {
+    color: black;
+    background-color: orange;
+}
+
+/* styling for the container of the timeline on the homepage */
+#timeline-container {
+    background-color: rgb(175, 215, 155);
+    padding: 2em;
+    padding-top: 0;
+    border-radius: 0px;
+    border: 5px solid rgb(75, 139, 81);
+    margin: 2em;
+    color: black;
+    opacity: 0.90;
+}
+
+
+/* aligns the navbar and fixes to the top of the webpage */
+.navbar-alignment {
+    /* Both below being applied with separate classes
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    */
+    align-items: center;
+    position: fixed;
+    background-color:rgb(99, 145, 99);
+    width: 100vw;
+    height: 4em;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* combines img and education/work exp into a column on left side of webpage */
+/* flex-direction: column overwrites flex-direction of the flex class */
+#hero {
+    /* Both below being applied with separate classes
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    */
+    flex-direction: column;
+    padding: 0 2em;
+}
+
+/* styling for education-experience container */
+.education-experience {
+    background-color: rgb(175, 215, 155);
+    padding: 1em;
+    padding-top: 0pc;
+    border: 5px solid rgb(75, 139, 81);
+    margin: 0em;
+    color: black;
+    opacity: 0.90;
+}
+
+
+/* styling for all children of contacts list */
+#contact-list > * {
+    padding-right: 2em;
+    list-style: none;
+    font-size: 20px;
+}
+
+/* general padding for all elements */
+.side-padding {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* flex class for all css elements requiring a display: flex */
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+/* default centering */
+.justify-center {
+    justify-content: center;
+}
+
+/* class for all text-decoration-none elements */
+.text-dec-none {
+    text-decoration: none;
+}
+
+/* grid styling for videography section */
+.video-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "c i"
+                         "t f";
+}
+
+/* grid areas for each video */
+.fly-fishing {
+    grid-area: c;
+}
+
+.camping {
+    grid-area: i;
+}
+
+.cooking {
+    grid-area: t;
+}
+
+.videography {
+    grid-area: f;
+}
+
+/* layout for the about-me cards section */ 
+.about-me-layout {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+/* default styling for all sub header containers */
+.sub-headers {
+    border: 5px solid rgb(75, 139, 81);;
+    margin: 20px 26px;
+    background-color: rgb(175, 215, 155);
+    margin-top: 2em;
+    opacity: 0.90;
+}
+
+/* default styling for each individual card */ 
+.card {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 5px solid rgb(75, 139, 81);;
+    background-color: rgb(175, 215, 155);
+    opacity: 0.90;
+}
+
+/* styling for p tags within card class */
+.card p {
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+}
+
+/* styling for h3 tags within card class */
+.card h3 {
+    padding: 0 1rem;
+}
+
+/* styling for interests container */
+.interest-container {
+    border: 5px solid rgb(75, 139, 81);
+    margin: 26px;
+    background-color: rgb(175, 215, 155);
+    opacity: 0.95;
+}
+
+/* styling for contact container */
+.contact-container {
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid rgb(75, 139, 81);
+    background-color: rgb(175, 215, 155);
+    opacity: 0.90;
+    margin: 2em 0 5em 0;
+}
+
+/* establishes offset when navigating webpage */
+.anchor {
+    display: block;
+    position: relative;
+    top: -5em;
+    visibility: hidden;
+}
